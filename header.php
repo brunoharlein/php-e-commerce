@@ -33,7 +33,10 @@
       <a class="nav-link" href="information.php">Informations</a>
      </li>
      <li class="nav-item">
-      <a class="nav-link" href="newproduct.php">product</a>
+      <a class="nav-link" href="newproduct.php"> new product</a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link" href="delete.php">delete product</a>
      </li>
     </ul>
    </div>

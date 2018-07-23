@@ -12,30 +12,38 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
- <body>
-   <?php include("header.php") ?>
+<body>
+<!-- php link for header  -->
+  <?php include("header.php") ?>;
 
-   <form action="new_product.php" method="post">
-    <p>
-     <label for="name">Name</label> : <input type="text" name="name" id="name"/>
-     <label for="price">Price</label> :  <input type="text" name="price" id="price"/>
-     <label for="stock">Stock</label> : <input type="text" name="stock" id="stock"/>
-     <label for="description">Description</label> :  <input type="text" name="description" id="description"/>
-     <label for="category">Category</label> : <input type="text" name="category" id="category"/>
-     <label for="made_in">Made in</label> :  <input type="text" name="made_in" id="made_in"/>
-     <input type="submit" value="Envoyer"/>
-     </p>
-   </form>
-
-   <?php include("footer.php") ?>;
+  <?php $bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', 'root') ?>
+  <?php $product = $value[_GET[index.php]];
+  echo "<article>
+        <h2>" . $product["name"] . "</h2>
+        </article>" ?>
 
 
+
+
+
+
+
+
+
+   <?php include("footer.php") ?>
+
+
+
+
+
+
+  <!-- Add your site or application content here -->
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <!-- bootstrap -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>

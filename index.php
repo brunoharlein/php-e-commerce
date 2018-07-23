@@ -21,23 +21,23 @@
   <?php include("header.php");
   $bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', 'root');
   $reponse = $bdd->query('SELECT * FROM product');
-  $donnees = $reponse->fetchall[PDO::FETCH_ASSOC];
+  $donnees = $reponse->fetchall(PDO::FETCH_ASSOC);
   foreach ($donnees as $key => $value)
   {
     echo "<article>
-      <h3>" . $value["name"] . "</h3>
-      <h3>" . $value["price"] . "</h3>
-      <h3>" . $value["name"] . "</h3>
-      <h3>" . $value["description"] . "</h3>
-      <h3>" . $value["category"] . "</h3>
-      <h3>" . $value["made_in"] . "</h3>;
+      <p>" . $value["name"] . "</p>
+      <p>" . $value["price"] . "</p>
+      <p>" . $value["stock"] . "</p>
+      <p>" . $value["description"] . "</p>
+      <p>" . $value["category"] . "</p>
+      <p>" . $value["made_in"] . "</p>
+      <a href='single.php?id=" . $value["id"] . "'> voir le produit </a>
 
           </article>";
 
   }
-    
 
-<!-- php link for footer -->
+
    include("footer.php"); ?>
 
 
